@@ -1,45 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #f0f8ff;
-            margin: 0;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 1rem;
-        }
-        section {
-            margin: 20px;
-            padding: 20px;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 1rem;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discord Servers</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url('https://cdn.discordapp.com/attachments/1254088315938934865/1307909831671418912/Blue_Purple_Abstract_Cosmic_Neon_Desktop_Wallpaper.png?ex=673c0573&is=673ab3f3&hm=50ba74b00349eece1515a59724fedff38ebf18ee965549d126fbfd20dd0fe367&') no-repeat center center fixed;
+      background-size: cover;
+      overflow: hidden;
+      color: white;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .server-card {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 15px;
+      margin: 20px;
+      padding: 20px;
+      width: 80%;
+      max-width: 600px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(10px);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .server-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
+    }
+
+    .server-info {
+      display: flex;
+      align-items: center;
+    }
+
+    .server-avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 3px solid white;
+      margin-right: 20px;
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        box-shadow: 0 0 10px white;
+      }
+      to {
+        box-shadow: 0 0 20px cyan;
+      }
+    }
+
+    .server-details {
+      font-size: 18px;
+    }
+
+    .join-button {
+      background: linear-gradient(90deg, #6a11cb, #2575fc);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s, background 0.3s;
+    }
+
+    .join-button:hover {
+      transform: scale(1.1);
+      background: linear-gradient(90deg, #2575fc, #6a11cb);
+    }
+
+    .footer {
+      margin-top: 20px;
+      font-size: 14px;
+      opacity: 0.7;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Website</h1>
-    </header>
-    <section>
-        <p>This is a simple HTML website created using Visual Studio Code and hosted on Hostinger!</p>
-        <button onclick="alert('You clicked the button!')">Click Me!</button>
-    </section>
-    <footer>
-        <p>© 2024 My Website. All rights reserved.</p>
-    </footer>
+  <div class="container">
+    <!-- Server 1 -->
+    <div class="server-card">
+      <div class="server-info">
+        <img src="https://cdn.discordapp.com/icons/your-server-id-1/avatar.png" alt="Poketopia" class="server-avatar">
+        <div class="server-details">
+          <h3>Poketopia</h3>
+          <p>discord.gg/poketopia</p>
+        </div>
+      </div>
+      <a href="https://discord.gg/poketopia" target="_blank">
+        <button class="join-button">Join</button>
+      </a>
+    </div>
+    
+    <!-- Server 2 -->
+    <div class="server-card">
+      <div class="server-info">
+        <img src="https://cdn.discordapp.com/icons/your-server-id-2/avatar.png" alt="Racing Discord" class="server-avatar">
+        <div class="server-details">
+          <h3>Racing Discord</h3>
+          <p>https://discord.gg/rguU7ansTY</p>
+        </div>
+      </div>
+      <a href="https://discord.gg/rguU7ansTY" target="_blank">
+        <button class="join-button">Join</button>
+      </a>
+    </div>
+  </div>
+  <div class="footer">© 2024 Fancy Discord List</div>
 </body>
 </html>
+
